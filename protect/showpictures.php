@@ -1,5 +1,5 @@
 <?php
-
+require("function.inc.php");
 $host = "localhost";
 $user = "eye";
 $pass = "life";
@@ -7,9 +7,9 @@ $db   = "eyeImageTest";
 
 $rowsperpage = 9;
 
-
-$connection = mysqli_connect($host, $user, $pass, $db) 
-    or die("database connect error, $host, $userm, $pass, $db");
+$connection = connect();
+//$connection = mysqli_connect($host, $user, $pass, $db) 
+//    or die("database connect error, $host, $userm, $pass, $db");
 
 $sql = "SELECT COUNT(*) FROM imageURL";
 $result = mysqli_query($connection, $sql);
@@ -37,7 +37,6 @@ $offset = ($currentpage - 1) * $rowsperpage;
 
 $query = "SELECT url FROM imageURL LIMIT $offset, $rowsperpage";
 $result= mysqli_query($connection, $query) or die("query execute error");
-require('function.inc.php');
 
 echo showPagination($currentpage, $totalpages);
 

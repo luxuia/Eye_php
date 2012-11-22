@@ -46,9 +46,9 @@
               Logged in as <a href="./main_files/main.php" class="navbar-link">Username</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="./index.php">Home</a></li>
+              <li><a href="./index.php">Home</a></li>
               <li><a href="./about.php">About</a></li>
-              <li><a href="./contact.php">Contact</a></li>
+              <li class="active"><a href="./contact.php">Contact</a></li>
             </ul>
             <form class="navbar-search pull-left action"> 
                 <input type="text" class="search-query span2" placeholder="Search">
@@ -65,7 +65,7 @@
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
               <li class="active">
-                <a href="#">All Pictures</a>
+                <a href="#">Main</a>
               </li>
               <li><a href="./main_files/main.php">Link</a></li>
               <li><a href="./main_files/main.php">Link</a></li>
@@ -86,7 +86,7 @@
         </div><!--/span-->
         <div class="span9">
             <?php
-                Include("./protect/showpictures.php");
+                Include("./protect/contactus.php");
             ?>
         </div>
       <hr>

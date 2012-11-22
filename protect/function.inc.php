@@ -18,3 +18,24 @@ function showPagination($current, $total) {
 <?php
 }
 ?>
+
+
+
+<?php
+
+function connect() {
+    $host = "localhost";
+    $user = "eye";
+    $pass = "life";
+    $db   = "eyeImageTest";
+
+
+    $connection = mysqli_connect($host, $user, $pass, $db) 
+        or die("database connect error $host, $user, $pass, $db");
+    return $connection;
+
+}
+
+
+?>
+
